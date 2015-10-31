@@ -11,7 +11,7 @@ function pushp {
 
 # Update local sabayon-scripts repo
 function cps {
-  cp -a ~/Shell/* ~/GitHub/sabayon-scripts/ && cp -a ~/.bashrc ~/GitHub/sabayon-scripts/
+  cp -a ~/Shell/* ~/GitHub/sabayon-scripts/Shell && cp -a ~/.bashrc ~/GitHub/sabayon-scripts/
 }
 
 # Update sabayon-scripts GitHub repo

@@ -3,7 +3,7 @@ function trinity {
 }
 
 function trinusr {
-  ./configure --prefix=user $@ && make && sudo make install
+  ./configure --prefix=/usr $@ && make && sudo make install
 }
 
 function bmod {
