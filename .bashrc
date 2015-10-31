@@ -14,7 +14,7 @@ if [[ $- != *i* ]] ; then
 fi
 
 # Execute all shell scripts in the ~/Shell directory
-for i in ~/Shell/*.sh
+for i in $(find "$HOME/Shell/" -name "*.sh")
 do
-	. $i
+    . "$i"
 done
