@@ -122,6 +122,23 @@ function cdy {
 	cd "/home/fusion809/Videos/YouTube"
 }
 
+# GitHub
 function cdg {
 	cd ~/GitHub/
+}
+
+function cdgp {
+	cd ~/GitHub/Packer
+}
+
+alias cdpak=cdgp
+
+function cdgpa {
+	cd ~/GitHub/Packer/arch-builder
+}
+
+alias cdarch=cdgpa
+
+function cdgs {
+	cd ~/GitHub/sabayon-tools
 }

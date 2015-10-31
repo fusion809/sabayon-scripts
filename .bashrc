@@ -14,19 +14,7 @@ if [[ $- != *i* ]] ; then
 	return
 fi
 
-. ~/Shell/bash.sh
-. ~/Shell/cd.sh
-. ~/Shell/compile.sh
-. ~/Shell/conv.sh
-. ~/Shell/ebuild.sh
-. ~/Shell/emerge.sh
-. ~/Shell/equo.sh
-. ~/Shell/git.sh
-. ~/Shell/lxde.sh
-. ~/Shell/memory.sh
-. ~/Shell/multimedia.sh
-. ~/Shell/mw.sh
-. ~/Shell/other.sh
-. ~/Shell/variables.sh
-
-# Put your fun stuff here.
+for i in `find ~/Shell/ -name "*.sh"`
+do
+	sh $i
+done
