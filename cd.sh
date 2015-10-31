@@ -68,6 +68,10 @@ function cdsh {
 	cd ~/Shell
 }
 
+function cdss {
+	cd ~/GitHub/sabayon-scripts
+}
+
 # Applications
 AP=~/.local/share/applications
 function cdap {

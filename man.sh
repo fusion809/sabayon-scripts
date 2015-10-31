@@ -9,7 +9,7 @@ function manconv {
   gzip -c $2.$1 > $2.$1.gz
   zcat $2.$1.gz | groff -mandoc -Thtml > $2.$1.html
   sudo chmod 777 -R $2.$1.html
-  rm $2.$1.bz2 $2.$1.gz $2.$1
+  rm $2.$1.gz $2.$1
 }
 
 function manhtml {
