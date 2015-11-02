@@ -44,5 +44,13 @@ function cploc {
 }
 
 function theme {
-  git clone https://github.com/JeffHoogland/$1 && cd $1 && git remote add upstream https://github.com/JeffHoogland/$1 && cd $1 && ./build.sh && cd .. && cp -a $1.edj ~/.e/e/themes/ && cd ..
+  git clone https://github.com/JeffHoogland/$1
+  cd $1
+  git remote add upstream https://github.com/JeffHoogland/$1
+  cd $1
+  chmod +x build.sh
+  ./build.sh
+  cd ..
+  cp -a $1.edj ~/.e/e/themes/
+  cd ..
 }

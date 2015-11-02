@@ -1,5 +1,3 @@
-MW='/var/www/localhost/htdocs/w'
-
 # Edit this mw shell script with nano
 function nmw {
 	nano ~/Shell/mw.sh

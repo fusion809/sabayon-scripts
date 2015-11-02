@@ -1,3 +1,12 @@
+export AP=~/.local/share/applications
+export docroot=/var/www/localhost/htdocs/
 export JAVA_HOME=/usr/lib/jvm/oracle-jdk-bin-1.8/bin
 export JEF=https://github.com/JeffHoogland
-export docroot=/var/www/localhost/htdocs/
+export MW=/var/www/localhost/htdocs/w
+  mw=MW
+export PAK=~/GitHub/Packer
+export SSH_ASKPASS=/usr/lib64/misc/ssh-askpass
+export WP=/var/www/localhost/htdocs/wp
+  wp=WP
+export WP_CON=$WP/wp-content
+  WP_con=WP_CON

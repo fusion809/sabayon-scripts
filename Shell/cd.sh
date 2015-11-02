@@ -8,8 +8,6 @@ function cdman {
 alias cdmn=cdman
 
 # MediaWiki
-MW=/var/www/localhost/htdocs/w
-alias mw=MW
 function cdmw {
 	cd $MW
 }
@@ -45,10 +43,6 @@ function cdat {
 function cdmok {
 	cd ~/Programs/Moksha
 }
-
-function cdst {
-	cd ~/Programs/sabayon-tools
-}
 # Pictures
 function cdpi {
 	cd ~/Pictures
@@ -64,66 +58,57 @@ function cds {
 
 #- End of Pictures -#
 
-function cdsh {
-	cd ~/Shell
-}
-
-function cdss {
-	cd ~/GitHub/sabayon-scripts
-}
+	function cdsh {
+		cd ~/Shell
+	}
 
 # Applications
-AP=~/.local/share/applications
-function cdap {
-	cd $AP
-}
+	function cdap {
+		cd $AP
+	}
 
-function cdvap {
-	cd $AP/VirtualBox
-}
+	function cdvap {
+		cd $AP/VirtualBox
+	}
 
 # VirtualBox
-function cdv {
-	cd ~/"VirtualBox VMs"
-}
+	function cdv {
+		cd ~/"VirtualBox VMs"
+	}
 
-function cddotv {
-	cd ~/.VirtualBox/Machines/
-}
+	function cddotv {
+		cd ~/.VirtualBox/Machines/
+	}
 
-function cdvbm {
-	cd "/home/fusion809/Desktop/VirtualBox machines"
-}
+	function cdvbm {
+		cd "$HOME/Desktop/VirtualBox machines"
+	}
 
-alias cdvb=cdvbm
+	alias cdvb=cdvbm
 #- End of VirtualBox -#
 
 # WordPress
-WP=/var/www/localhost/htdocs/wp
-alias wp=WP
-WP_CON=$WP/wp-content
-alias wp_con=WP_CON
 
-function cdwp {
-	cd $WP
-}
+	function cdwp {
+		cd $WP
+	}
 
-function cdwpp {
-	cd $WP_CON/plugins
-}
+	function cdwpp {
+		cd $WP_CON/plugins
+	}
 
-function cdwpt {
-	cd $WP_CON/themes
-}
+	function cdwpt {
+		cd $WP_CON/themes
+	}
 
-function cdwpu {
-	cd $WP_CON/uploads
-}
+	function cdwpu {
+		cd $WP_CON/uploads
+	}
 
 #- End of WordPress -#
 
 function cdy {
-	cd "/home/fusion809/Videos/YouTube"
+	cd ~/Videos/YouTube
 }
 
 # GitHub
@@ -131,18 +116,36 @@ function cdg {
 	cd ~/GitHub/
 }
 
-function cdgp {
-	cd ~/GitHub/Packer
-}
+	function cdgp {
+		cd $PAK
+	}
 
-alias cdpak=cdgp
+	alias cdpak=cdgp
 
-function cdgpa {
-	cd ~/GitHub/Packer/arch-builder
-}
+		function cdgpa {
+			cd $PAK/arch-builder
+		}
 
-alias cdarch=cdgpa
+		alias cdarch=cdgpa
+		alias cdar=cdgpa
+		alias cdgab=cdgpa
+		alias cdpab=cdgpa
+		alias cdab=cdgpa
 
-function cdgs {
-	cd ~/GitHub/sabayon-tools
-}
+		function cdgen {
+			cd $PAK/gentoo-packer
+		}
+
+		function cdsp {
+			cd $PAK/sabayon-packer
+		}
+
+	function cdss {
+		cd ~/GitHub/sabayon-scripts
+	}
+
+	function cdgs {
+		cd ~/GitHub/sabayon-tools
+	}
+
+	alias cdst=cdgs

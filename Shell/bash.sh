@@ -32,7 +32,7 @@ function nbash {
 
 function gbash {
 	gvim ~/.bashrc
-	pushd ~/Shell
+        pushd ~/Shell
         if [[ -n $1 ]]
                 then
                     gvim $1.sh
