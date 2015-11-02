@@ -29,3 +29,19 @@ function sbash {
 function nbash {
 	nano ~/.bashrc
 }
+
+function gbash {
+	gvim ~/.bashrc
+	pushd ~/Shell
+        if [[ -n $1 ]]
+                then
+                    gvim $1.sh
+                else
+                    select x in `find . -name "*.sh"`
+                    do
+                       gvim $x
+                    break
+                    done
+        fi
+        popd
+}
