@@ -36,6 +36,12 @@ function cdp {
 	cd ~/Programs
 }
 
+function cdph {
+	cd ~/Programs/Hawaii
+}
+
+alias cdhaw=cdph
+
 function cdat {
 	cd ~/Programs/atom*
 }

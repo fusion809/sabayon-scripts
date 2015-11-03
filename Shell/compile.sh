@@ -11,5 +11,9 @@ function bmod {
 }
 
 function cmtrin {
-  mkdir build && cd build && cmake .. && make && sudo make install
+  mkdir build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=/usr && make && sudo make install
+}
+
+function ctrin {
+  cmake .. -DCMAKE_INSTALL_PREFIX=/usr && make && sudo make install
 }

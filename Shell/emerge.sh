@@ -52,6 +52,14 @@ function emup {
   sudo emerge -uDU --with-bdeps=y @world
 }
 
+# Search categories
+function cats {
+  sudo eix -C -c "$@"
+}
+
+alias eixcc=cats
+alias eicc=cats
+
 # Track the download progress of packages being installed with Portage
 function tailf {
   tail -f /var/log/emerge-fetch.log
