@@ -54,3 +54,7 @@ function theme {
   cp -a $1.edj ~/.e/e/themes/
   cd ..
 }
+
+function pbuild {
+  packer build -only=virtualbox-iso "$@"
+}

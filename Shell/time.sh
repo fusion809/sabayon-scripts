@@ -10,6 +10,11 @@ function EST {
   TZ="America/New_York" date +"%r %A, %d %B %Y"
 }
 
+# Pacific Standard Time (PST)
+function PST {
+  TZ="America/Los_Angeles" date +"%r %A, %d %B %Y"
+}
+
 # Universal Time Coordinated (UTC) or Grenwich-Meridian Time (GMT)
 function GMT {
   TZ="Europe/London" date +"%r %A, %d %B %Y"
