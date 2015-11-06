@@ -58,3 +58,7 @@ function theme {
 function pbuild {
   packer build -only=virtualbox-iso "$@"
 }
+
+function hweb {
+  hugo server --theme=hyde --buildDrafts --appendPort=true -w true
+}

@@ -155,3 +155,9 @@ function cdg {
 	}
 
 	alias cdst=cdgs
+
+	function cdgf {
+		cd ~/GitHub/hugo-website
+	}
+
+	alias cdweb=cdgf

@@ -3,6 +3,7 @@ function usage {
 }
 
 function ps_mem {
-  cdp
+  pushd ~/ps_mem
   sudo python ps_mem.py -p $@
+  popd
 }

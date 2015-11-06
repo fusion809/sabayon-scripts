@@ -30,7 +30,7 @@ alias ined=seqid
 
 # Perform a libtest (looking for missing libraries) with Entropy.
 function seql {
-	sudo equo libtest
+	sudo equo libtest -q
 }
 
 alias libtest=seql
@@ -97,3 +97,15 @@ function spm {
 alias spmsync=spm
 alias seqrs=spm
 alias seqs=spm
+
+function sabo {
+	sudo equo query list available --quiet sabayonlinux.org | sort | uniq | wc -l
+}
+
+function sabl {
+	sudo equo query list available --quiet sabayon-limbo | sort | uniq | wc -l
+}
+
+function sabw {
+	sudo equo query list available --quiet sabayon-weekly | sort | uniq | wc -l
+}
