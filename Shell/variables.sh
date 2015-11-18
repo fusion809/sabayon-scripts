@@ -1,12 +1,13 @@
-export LS=~/.local/share/
+export LS=$HOME/.local/share/
 export IC=$LS/icons
 export AP=$LS/applications
 export docroot=/var/www/localhost/htdocs/
+export GHUB=$HOME/GitHub
 export JAVA_HOME=/usr/lib/jvm/oracle-jdk-bin-1.8/bin
 export JEF=https://github.com/JeffHoogland
 export MW=/var/www/localhost/htdocs/w
   mw=MW
-export PAK=~/GitHub/Packer
+export PAK=$GHUB/Packer
 export SSH_ASKPASS=/usr/lib64/misc/ssh-askpass
 export WP=/var/www/localhost/htdocs/wp
   wp=WP
