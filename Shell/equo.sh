@@ -1,20 +1,20 @@
 # Test for missing dependencies and then install them
 function seqd {
-	spm && sudo equo deptest
+	sudo equo deptest
 }
 
 alias deptest=seqd
 
 # Test for missing dependencies, quiet the output
 function seqdq {
-	spm && sudo equo deptest -q
+	sudo equo deptest -q
 }
 
 alias deptestq=seqdq
 
 # Install a package with Entropy, ask first.
 function seqi {
-	spm && sudo equo i -av $@
+	sudo equo i -av $@
 }
 
 alias install=seqi
@@ -23,7 +23,7 @@ alias ins=seqi
 # Reinstall dependencies of package along with the package itself and all deep
 # dependencies
 function seqid {
-	spm && sudo equo i -av --deep --empty $@
+	sudo equo i -av --deep --empty $@
 }
 
 alias ined=seqid
@@ -46,14 +46,14 @@ alias ltq=seqlq
 
 # Mask a package
 function seqm {
-	spm && sudo equo mask $@
+	sudo equo mask $@
 }
 
 alias mask=seqm
 
 # Install package dependencies (and only the dependencies) with Entropy
 function seqo {
-	spm && sudo equo i -aov $@
+	sudo equo i -aov $@
 }
 
 alias build-dep=seqo
@@ -63,7 +63,7 @@ alias bdep=seqo
 # Inflate Portage binary into SPM binary.
 function seqpi {
 	pushd /usr/portage/packages/$1
-	spm && sudo equo pkg inflate $2
+	sudo equo pkg inflate $2
 	popd
 }
 
@@ -75,11 +75,16 @@ alias seqp=seqpi
 # packages you want.
 
 function seqr {
-	spm && sudo equo rm -av $@
+	sudo equo rm -av $@
 }
 
 alias remove=seqr
 alias rem=seqr
+
+# Deptest & libtest
+function seqt {
+	spm && sudo equo libtest && sudo equo deptest
+}
 
 # Update all packages installed with Entropy and make Entropy acknowledge emerged packages
 function sequ {

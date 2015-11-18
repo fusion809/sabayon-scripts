@@ -3,12 +3,14 @@ function trinity {
 }
 
 function trinusr {
-  ./configure --prefix=/usr $@ && make && sudo make install
+  ./configure --prefix=/usr "$@" && make && sudo make install
 }
 
 function bmod {
-  ./autogen.sh --prefix=/usr && make && sudo make install
+  ./autogen.sh --prefix=/usr "$@" && make && sudo make install
 }
+
+alias atrin=bmod
 
 function cmtrin {
   mkdir build && cd build && cmake .. -DCMAKE_INSTALL_PREFIX=/usr && make && sudo make install

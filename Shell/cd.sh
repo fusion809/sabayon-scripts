@@ -49,6 +49,11 @@ function cdat {
 function cdmok {
 	cd ~/Programs/Moksha
 }
+
+function cdmokm {
+	cd ~/Programs/Moksha/moksha-modules-extra-master
+}
+
 # Pictures
 function cdpi {
 	cd ~/Pictures
@@ -75,6 +80,13 @@ function cds {
 
 	function cdvap {
 		cd $AP/VirtualBox
+	}
+
+	alias cdapv=cdvap
+
+	# Icons
+	function cdic {
+		cd $IC
 	}
 
 # VirtualBox
@@ -146,6 +158,10 @@ function cdg {
 			cd $PAK/sabayon-packer
 		}
 
+	function cdms {
+		cd ~/GitHub/moksha-scripts
+	}
+
 	function cdss {
 		cd ~/GitHub/sabayon-scripts
 	}
@@ -155,6 +171,14 @@ function cdg {
 	}
 
 	alias cdst=cdgs
+
+	function cdlx {
+		cd $HOME/GitHub/LXDE-menu
+	}
+	
+	function cdfgi {
+		cd ~/GitHub/fusion809.github.io
+	}
 
 	function cdgf {
 		cd ~/GitHub/hugo-website

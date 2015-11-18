@@ -1,4 +1,6 @@
-export AP=~/.local/share/applications
+export LS=~/.local/share/
+export IC=$LS/icons
+export AP=$LS/applications
 export docroot=/var/www/localhost/htdocs/
 export JAVA_HOME=/usr/lib/jvm/oracle-jdk-bin-1.8/bin
 export JEF=https://github.com/JeffHoogland

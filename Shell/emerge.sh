@@ -33,6 +33,11 @@ function emp {
   sudo emerge -pv $@
 }
 
+# rev-dep
+function emrv {
+  sudo revdep-rebuild
+}
+
 # Unmerge a package, does not the dependency tree
 function emrm {
   sudo emerge -C $@ && spm
@@ -42,7 +47,7 @@ alias emc=emrm
 
 # Sync Portage Tree and all Layman overlays.
 function ems {
-  sudo emerge --sync && sudo layman -S
+  sudo emerge --sync --quiet && sudo layman -Sq
 }
 
 alias sync=ems
@@ -72,4 +77,9 @@ function bpack {
   sudo emerge --buildpkgonly =x11-wm/moksha-0.1.0::sabayon-tools > /home/fusion809/buildpkg.txt 2> /home/fusion809/buildpkg_err.txt
   pastebinit -i /home/fusion809/buildpkg.txt -b http://paste2.org
   pastebinit -i /home/fusion809/buildpkg_err.txt -b http://paste2.org
+}
+
+# Install from list.txt
+function emlist {
+  sudo emerge -av $(cat list.txt)
 }
