@@ -23,6 +23,6 @@ function shup {
 function gitsw {
   git remote rm origin
   git remote rm upstream
-  git remote add origin git://github.com/fusion809/"${PWD##*/}".git
-  git remote add upstream git://github.com/fusion809/"${PWD##*/}".git
+  git remote add origin git@github.com:fusion809/"${PWD##*/}".git
+  git remote add upstream git@github.com:fusion809/"${PWD##*/}".git
 }
