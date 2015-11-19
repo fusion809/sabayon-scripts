@@ -2,6 +2,7 @@ export LS=$HOME/.local/share/
 export IC=$LS/icons
 export AP=$LS/applications
 export docroot=/var/www/localhost/htdocs/
+export DOCK='sudo docker run -ti -v "$PWD"/artifacts:/usr/portage/packages sabayon/builder-amd64'
 export GHUB=$HOME/GitHub
 export JAVA_HOME=/usr/lib/jvm/oracle-jdk-bin-1.8/bin
 export JEF=https://github.com/JeffHoogland

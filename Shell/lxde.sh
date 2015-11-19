@@ -7,6 +7,8 @@ function amen {
 	sudo atom /etc/xdg/menus/ /usr/share/desktop-directories
 }
 
+alias amenu=amen
+
 function cpath {
 	sudo cp -a /$1/$2 $HOME/GitHub/LXDE-menu/$1
 }
