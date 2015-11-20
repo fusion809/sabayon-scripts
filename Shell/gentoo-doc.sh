@@ -8,14 +8,13 @@ function ghand {
 }
 
 function ghandall {
-  A=X86
 
   # Installation
   S=Installation
   L=('About' 'Base' 'Bootloader' 'Disks' 'Finalizing' 'Kernel' 'Media' 'Networking' 'Stage' 'System' 'Tools')
   for i in "${L[@]}"
   do
-    ghand $A "$S"/"$i"
+    ghand $1 "$S"/"$i"
   done
   unset L
   unset S
@@ -25,7 +24,7 @@ function ghandall {
   L=('EnvVar' 'Features' 'Initscripts' 'Portage' 'USE')
   for i in "${L[@]}"
   do
-    ghand $A "$S"/"$i"
+    ghand $1 "$S"/"$i"
   done
   unset L
   unset S
@@ -35,7 +34,7 @@ function ghandall {
   L=('Advanced' 'Branches' 'CustomTree' 'Files' 'Tools' 'Variables')
   for i in "${L[@]}"
   do
-    ghand $A "$S"/"$i"
+    ghand $1 "$S"/"$i"
   done
   unset L
   unset S
@@ -45,7 +44,7 @@ function ghandall {
   L=('Advanced' 'Dynamic' 'Extending' 'Introduction' 'Modular' 'Wireless')
   for i in "${L[@]}"
   do
-    ghand $A "$S"/"$i"
+    ghand $1 "$S"/"$i"
   done
   unset L
   unset S
