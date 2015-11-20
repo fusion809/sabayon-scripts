@@ -1,9 +1,8 @@
 function ghand {
   # Input 1 is the architecture
   # Input 2 is the Page name.
-  cdt
-  mkdir -p Gentoo/$1/$2/..
-  cd Gentoo/$1/$2/..
+  mkdir -p ~/Textbooks/Gentoo/$1/$2/..
+  cd ~/Textbooks/Gentoo/$1/$2/..
   wkhtmltopdf https://wiki.gentoo.org/wiki/Handbook:"$1"/"$2" "${2##*/}".pdf
 }
 
@@ -48,4 +47,9 @@ function ghandall {
   done
   unset L
   unset S
+}
+
+function unit {
+  cd ~/Textbooks/Gentoo/$1
+  pdfunite $1.pdf */*.pdf output.pdf
 }
