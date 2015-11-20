@@ -7,11 +7,11 @@ function manifest {
   ebuild "$@" manifest
 }
 
-function bpkg {
-  manif $@
-  push "Updating manifest and $@"
+function bpkgc {
+  ebuild $1.ebuild manifest
+  push "Updating manifest and "$1""
   sudo layman -s sabayon-tools
-  sudo emerge -abv =$@::sabayon-tools
+  sudo emerge -abv =$1::sabayon-tools
 }
 
 function bpkgf {

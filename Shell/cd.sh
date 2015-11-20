@@ -175,7 +175,7 @@ function cdg {
 	function cdlx {
 		cd $HOME/GitHub/LXDE-menu
 	}
-	
+
 	function cdfgi {
 		cd ~/GitHub/fusion809.github.io
 	}
@@ -185,3 +185,7 @@ function cdg {
 	}
 
 	alias cdweb=cdgf
+
+function cdt {
+	cd ~/Textbooks
+}
