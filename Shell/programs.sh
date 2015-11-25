@@ -1,15 +1,3 @@
-# Atom
-function apmi {
-  apm install $@
-}
-
-function apmup {
-  apm update
-}
-
-alias apmu=apmup
-alias apmupdate=apmup
-
 # Command-line programs
 function octcli {
 	octave --no-gui
@@ -17,6 +5,10 @@ function octcli {
 
 function opt {
   optipng -o7 $@.png
+}
+
+function screenshot {
+	xfce4-screenshooter > output.png && optipng -o7 output.png
 }
 
 function pbuild {

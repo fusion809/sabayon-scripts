@@ -1,6 +1,7 @@
 # git tools
 # Switch to SSH
 function gitsw {
+  # $1 is the username of the repo
   git remote rm origin
   git remote rm upstream
   if [[ -n "$1" ]]
@@ -19,7 +20,7 @@ alias gits=gitsw
 
 # Push changes
 function push {
-  git add . && git commit -m "$1" && git push origin master
+  git add --all && git commit -m "$1" && git push origin master
 }
 
 # Push GitHub pages changes
@@ -30,7 +31,8 @@ function pushp {
 # sabayon-scripts
   ## Update local sabayon-scripts repo
   function cps {
-    cp -a ~/Shell/* ~/GitHub/sabayon-scripts/Shell && cp -a ~/.bashrc ~/GitHub/sabayon-scripts/
+    cp -a ~/Shell/* ~/GitHub/sabayon-scripts/Shell
+    cp -a ~/.bashrc ~/GitHub/sabayon-scripts/
   }
 
   ## Update sabayon-scripts GitHub repo
@@ -38,10 +40,14 @@ function pushp {
     cps && cdss && push "$1"
   }
 
-# SSH
+#############################################################
+# Sign in with SSH at startup
+# Makes contributing to GitHub projects a lot simpler.
 SSH_ENV=$HOME/.ssh/environment
 
 # start the ssh-agent
+# Remember, for this to work you need your SSH keys setup
+# https://help.github.com/articles/generating-ssh-keys/
 function start_agent {
     echo "Initializing new SSH agent..."
     # spawn ssh-agent
@@ -60,3 +66,9 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+
+function gitsize {
+  git bundle create tmp.bundle --all
+  du -bs tmp.bundle
+  rm tmp.bundle
+}

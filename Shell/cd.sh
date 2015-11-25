@@ -129,6 +129,10 @@ function cdy {
 	cd ~/Videos/YouTube
 }
 
+function cdvs {
+	cd ~/Videos/Spec
+}
+
 # GitHub
 function cdg {
 	cd ~/GitHub/

@@ -18,3 +18,14 @@ function theme {
   cp -a $1.edj ~/.e/e/themes/
   cd ..
 }
+
+function modbuild {
+  pushd ~/Programs/moksha-modules-extra-master
+    for i in `find . -maxdepth 1 -type d -exec basename {} \;`
+    do
+      pushd $i
+        ./autogen.sh --prefix=/usr && make && sudo make install
+      popd
+    done
+  popd
+}

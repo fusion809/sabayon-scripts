@@ -26,3 +26,8 @@ alias UTC=GMT
 function CET {
   TZ="Europe/Rome" date +"%r %A, %d %B %Y"
 }
+
+# Venezuelan Time
+function VT {
+  TZ="America/Caracas" date +"%r %A, %d %B %Y"
+}
