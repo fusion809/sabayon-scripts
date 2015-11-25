@@ -10,7 +10,7 @@ function ghandall {
   mkdir -p ~/Textbooks/Gentoo/$1 && cd ~/Textbooks/Gentoo/$1
   wkhtmltopdf https://wiki.gentoo.org/wiki/Handbook:"$1" "$1".pdf
 
-  # Installation
+  # Convert to PDF the four major sections
   L=('Installation' 'Working' 'Portage' 'Networking')
   for i in "${L[@]}"
   do
