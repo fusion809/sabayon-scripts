@@ -41,6 +41,9 @@ function pushp {
   }
 
 #############################################################
+# The following script was taken from
+# http://stackoverflow.com/a/18915067/1876983
+#############################################################
 # Sign in with SSH at startup
 # Makes contributing to GitHub projects a lot simpler.
 SSH_ENV=$HOME/.ssh/environment
@@ -66,9 +69,18 @@ if [ -f "${SSH_ENV}" ]; then
 else
     start_agent;
 fi
+#############################################################
 
+# Estimate the size of the current repo
+# Taken from http://stackoverflow.com/a/16163608/1876983
 function gitsize {
-  git bundle create tmp.bundle --all
-  du -bs tmp.bundle
-  rm tmp.bundle
+  git gc
+  git count-objects -vH
+}
+
+# Git shrink
+# Taken from http://stackoverflow.com/a/2116892/1876983
+function gitsh {
+  git reflog expire --all --expire=now
+  git gc --prune=now --aggressive
 }
