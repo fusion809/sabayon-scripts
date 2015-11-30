@@ -91,11 +91,11 @@ function cds {
 
 # VirtualBox
 	function cdv {
-		cd ~/"VirtualBox VMs"
+		cd "$HOME/VirtualBox VMs"
 	}
 
-	function cddotv {
-		cd ~/.VirtualBox/Machines/
+	function cdvi {
+		cd "$HOME/VirtualBox VMs/ISO"
 	}
 
 	function cdvbm {
