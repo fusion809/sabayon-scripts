@@ -1,21 +1,11 @@
-function cpman {
-  sudo cp -a /usr/share/man/man$1/$2.$1.bz2 ~/Documents/Manpages
-}
-
-function manconv {
-  cdman
-  sudo chmod 777 -R $2.$1.bz2
-  bzip2 -d $2.$1.bz2
-  gzip -c $2.$1 > $2.$1.gz
-  zcat $2.$1.gz | groff -mandoc -Thtml > $2.$1.html
-  sudo chmod 777 -R *
-  rm $2.$1
-}
-
 function manhtml {
-  cpman $1 $2 && manconv $1 $2 && cp -a $HOME/Documents/Manpages/* $HOME/GitHub/fusion809.github.io/man && cd $HOME/GitHub/fusion809.github.io/man
+  # First input is the man page number.
+  # Second input is the man page name.
+  bzcat /usr/share/man/man$1/$2.$1.bz2 | man2html > $HOME/GitHub/fusion809.github.io/man/$2.$1.html
+  sudo chmod 777 -R $HOME/GitHub/fusion809.github.io/man/$2.$1.html
 }
 
 function manhtmld {
-  cpman $1 $2 && manconv $1 $2
+  bzcat /usr/share/man/man$1/$2.$1.bz2 | man2html > $HOME/Documents/Manpages/$2.$1.html
+  sudo chmod 777 -R $HOME/Documents/Manpages/$2.$1.html
 }

@@ -98,6 +98,10 @@ function cds {
 		cd "$HOME/VirtualBox VMs/ISO"
 	}
 
+	function cdvdi {
+		cd "$HOME/VirtualBox VMs/Virtual Disk Image"
+	}
+
 	function cdvbm {
 		cd "$HOME/Desktop/VirtualBox machines"
 	}
