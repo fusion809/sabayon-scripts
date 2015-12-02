@@ -18,6 +18,13 @@ alias SSH=gitsw
 alias gitssh=gitsw
 alias gits=gitsw
 
+function gitc {
+  git clone git@github.com:fusion809/$1.git
+  pushd $1
+    git remote add upstream git@github.com:$2/$1.git
+  popd
+}
+
 # Push changes
 function push {
   git add --all && git commit -m "$1" && git push origin master
