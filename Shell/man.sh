@@ -1,11 +1,25 @@
+function mdocin {
+  # Install mandoc
+  if [[ -n $1 ]]
+    then
+      wget -cqO- http://mdocml.bsd.lv/snapshots/mdocml-$1.tar.gz | tar -xz
+      pushd mdocml-$1
+    else
+      wget -cqO- http://mdocml.bsd.lv/snapshots/mdocml-1.13.3.tar.gz | tar -xz
+      pushd mdocml-1.13.3
+  fi
+  ./configure --prefix=/usr 2> config_err.txt && make && sudo make install DESTDIR=/
+  popd
+}
+
 function manhtml {
   # First input is the man page number.
   # Second input is the man page name.
-  bzcat /usr/share/man/man$1/$2.$1.bz2 | man2html > $HOME/GitHub/fusion809.github.io/man/$2.$1.html
+  bzcat /usr/share/man/man$1/$2.$1.bz2 | mandoc -Thtml > $HOME/GitHub/fusion809.github.io/man/$2.$1.html
   sudo chmod 777 -R $HOME/GitHub/fusion809.github.io/man/$2.$1.html
 }
 
 function manhtmld {
-  bzcat /usr/share/man/man$1/$2.$1.bz2 | man2html > $HOME/Documents/Manpages/$2.$1.html
+  bzcat /usr/share/man/man$1/$2.$1.bz2 | mandoc -Thtml > $HOME/Documents/Manpages/$2.$1.html
   sudo chmod 777 -R $HOME/Documents/Manpages/$2.$1.html
 }

@@ -70,16 +70,7 @@ function tailf {
   tail -f /var/log/emerge-fetch.log
 }
 
-# Test package building
-function bpack {
-  sudo chmod 777 -R buildpkg.txt && sudo chmod 777 -R buildpkg_err.txt
-  sudo layman -s sabayon-tools
-  sudo emerge --buildpkgonly =x11-wm/moksha-0.1.0::sabayon-tools > /home/fusion809/buildpkg.txt 2> /home/fusion809/buildpkg_err.txt
-  pastebinit -i /home/fusion809/buildpkg.txt -b http://paste2.org
-  pastebinit -i /home/fusion809/buildpkg_err.txt -b http://paste2.org
-}
-
 # Install from list.txt
 function emlist {
-  sudo emerge -av $(cat list.txt)
+  sudo emerge -av $(cat "$1".txt)
 }
