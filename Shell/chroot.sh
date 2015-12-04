@@ -138,4 +138,16 @@ function sabayon-chrootn {
 }
 
 alias schrootn=sabayon-chrootn
-alias schroot2='sabayon-chrootn 2'
+
+function schroot2 {
+  sudo mount -t proc none /root2/proc
+  sudo mount -o bind /dev /root2/dev
+  sudo mount -o bind /usr/portage /root2/usr/portage
+  sudo mount -o bind /usr/src/linux /root2/usr/src/linux
+  sudo mount -o bind /lib/modules /root2/lib/modules
+  sudo mount -o bind /sys /root2/sys
+  sudo cp /etc/resolv.conf /root2/etc/resolv.conf
+  sudo mount -o bind /tmp /root2/tmp
+  sudo mount --rbind /dev /root2/dev
+  sudo mount --rbind /sys /root2/sys
+}

@@ -58,6 +58,8 @@ function pushss {
   function cps {
     cp -a ~/Shell/* ~/GitHub/sabayon-scripts/Shell
     cp -a ~/.bashrc ~/GitHub/sabayon-scripts/
+    sudo cp -a /root/.bashrc /home/fusion809/GitHub/sabayon-scripts/root/
+    sudo cp -a /root/Shell/* /home/fusion809/GitHub/sabayon-scripts/root/Shell
   }
 
   ## Update sabayon-scripts GitHub repo
