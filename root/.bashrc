@@ -17,7 +17,7 @@ fi
 
 # Put your fun stuff here.
 # Execute all shell scripts in the ~/Shell directory
-for i in /root/Shell/*.sh
+for i in ~/Shell/*.sh
 do
 	. $i
 done

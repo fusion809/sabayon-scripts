@@ -9,3 +9,7 @@ function tasks {
 function pasteit {
   pastebinit -i $@ -b http://paste2.org
 }
+
+function sport {
+  grep --include="$1.ebuild" -R "$2" /usr/portage
+}

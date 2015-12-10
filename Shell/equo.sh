@@ -73,7 +73,6 @@ alias seqp=seqpi
 # Remove a package with Entropy and all packages that depend on said package
 # Ask first. It is advisable to ask first, because sometimes this can remove
 # packages you want.
-
 function seqr {
 	sudo equo rm -av $@
 }
@@ -81,20 +80,20 @@ function seqr {
 alias remove=seqr
 alias rem=seqr
 
-# Deptest & libtest
+# Perform standard bug fixes with Entropy, checking for missing libraries and dependencies.
 function seqt {
 	spm && sudo equo libtest && sudo equo deptest
 }
 
 # Update all packages installed with Entropy and make Entropy acknowledge emerged packages
 function sequ {
-	sudo equo update && sudo equo upgrade --purge && sudo equo cleanup
+	spm && sudo equo update && sudo equo upgrade --purge && sudo equo cleanup
 }
 
 alias update=sequ
 alias upgrade=sequ
 
-# Make Entropy acknowledge the existance of emerge packages
+# Make Entropy acknowledge the existance of emerged (installed with Portage) packages
 function spm {
 	sudo equo rescue spmsync
 }
@@ -103,6 +102,8 @@ alias spmsync=spm
 alias seqrs=spm
 alias seqs=spm
 
+# List packages available in the three main Entropy Repositories
+# Note this requires these repos to be enabled on your system
 function sabo {
 	sudo equo query list available --quiet sabayonlinux.org | sort | uniq | wc -l
 }

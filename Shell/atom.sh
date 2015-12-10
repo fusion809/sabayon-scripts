@@ -42,6 +42,10 @@ function edram {
   atom $HOME/RAM
 }
 
+function edrsh {
+  sudo atom /root/Shell
+}
+
 function edsh {
   atom $HOME/Shell
 }
@@ -56,4 +60,9 @@ function edst {
 # Defining atom-beta
 function atom-beta {
   /usr/local/bin/atom
+}
+
+# View Portage Tree
+function edpt {
+  atom /usr/portage/
 }
