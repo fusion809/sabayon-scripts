@@ -39,3 +39,7 @@ function akey {
 function amake {
 	atom /etc/portage/make.conf
 }
+
+function stest {
+	layman -s sabayon-tools && emerge -b =$1::sabayon-tools
+}
