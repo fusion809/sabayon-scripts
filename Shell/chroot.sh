@@ -151,3 +151,7 @@ function schroot2 {
   sudo mount --rbind /dev /root2/dev
   sudo mount --rbind /sys /root2/sys
 }
+
+function cppack {
+  sudo cp -a /root2/$1 $1
+}

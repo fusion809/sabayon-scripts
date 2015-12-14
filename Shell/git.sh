@@ -49,6 +49,11 @@ function gitsh {
   git gc --prune=now --aggressive
 }
 
+# Shrink and estimate size
+function gitssi {
+  gitsh && gitsize
+}
+
 function pushss {
   push "$1" && gitsh && gitsize
 }

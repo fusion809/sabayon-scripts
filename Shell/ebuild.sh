@@ -39,10 +39,12 @@ function stupb {
 }
 
 function bpkgc {
-  ebuild $1.ebuild manifest
-  push "Updating manifest and "$1""
-  sudo layman -s sabayon-tools
-  sudo emerge -abv =$1::sabayon-tools
+  if [[ -n $@ ]]
+  then
+    sudo ebuild $@.ebuild package
+  else
+    sudo ebuild *.ebuild package
+  fi
 }
 
 function bpkgf {
