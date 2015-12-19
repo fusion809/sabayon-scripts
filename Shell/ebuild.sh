@@ -41,9 +41,18 @@ function stupb {
 function bpkgc {
   if [[ -n $@ ]]
   then
-    sudo ebuild $@.ebuild package
+    sudo ebuild $@.ebuild manifest clean package merge
   else
-    sudo ebuild *.ebuild package
+    sudo ebuild *.ebuild manifest clean package merge
+  fi
+}
+
+function bpkgm {
+  if [[ -n $@ ]]
+  then
+    sudo ebuild $@.ebuild manifest package merge
+  else
+    sudo ebuild *.ebuild manifest package merge
   fi
 }
 
@@ -67,4 +76,24 @@ function bpkgon {
 function bpkgonf {
   sudo layman -s sabayon-tools
   sudo emerge -B =$@::sabayon-tools
+}
+
+function edeb {
+  L=$(find /usr/portage -type f -name "$1*.ebuild")
+  for i in ${L[@]}
+  do
+    atom $i
+  done
+}
+
+function ebsch {
+  grep -l --include "*$3*.ebuild" -R "$1" /usr/portage/$2
+}
+
+function edsch {
+  L=$(grep -l --include "*.ebuild" -R "$1" /usr/portage/$2)
+  for i in ${L[@]}
+  do
+    atom $i
+  done
 }

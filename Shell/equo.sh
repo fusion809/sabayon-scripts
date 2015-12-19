@@ -1,3 +1,26 @@
+# List packages available in the three main Entropy Repositories
+# Note this requires these repos to be enabled on your system
+function sabo {
+	sudo equo query list available --quiet sabayonlinux.org | sort | uniq | wc -l
+}
+
+function sabl {
+	sudo equo query list available --quiet sabayon-limbo | sort | uniq | wc -l
+}
+
+function sabw {
+	sudo equo query list available --quiet sabayon-weekly | sort | uniq | wc -l
+}
+
+# Inflate Portage binary into SPM binary.
+function sepi {
+	sudo equo pkg inflate /usr/portage/packages/$1/$2
+}
+
+alias smart=sepi
+alias seqp=sepi
+alias seqpi=sepi
+
 # Test for missing dependencies and then install them
 function seqd {
 	sudo equo deptest
@@ -19,6 +42,11 @@ function seqi {
 
 alias install=seqi
 alias ins=seqi
+
+# Local install
+function seqli {
+	sudo equo i -av /var/tmp/entropy/$1/$2*.tbz2 || echo "Correct syntax is seqli <CAT> <PACKAGE>"
+}
 
 # Reinstall dependencies of package along with the package itself and all deep
 # dependencies
@@ -60,16 +88,6 @@ alias build-dep=seqo
 alias builddep=seqo
 alias bdep=seqo
 
-# Inflate Portage binary into SPM binary.
-function seqpi {
-	pushd /usr/portage/packages/$1
-	sudo equo pkg inflate $2
-	popd
-}
-
-alias smart=seqpi
-alias seqp=seqpi
-
 # Remove a package with Entropy and all packages that depend on said package
 # Ask first. It is advisable to ask first, because sometimes this can remove
 # packages you want.
@@ -93,6 +111,11 @@ function sequ {
 alias update=sequ
 alias upgrade=sequ
 
+# Unmask package
+function sequn {
+	sudo equo unmask $@
+}
+
 # Make Entropy acknowledge the existance of emerged (installed with Portage) packages
 function spm {
 	sudo equo rescue spmsync
@@ -101,17 +124,3 @@ function spm {
 alias spmsync=spm
 alias seqrs=spm
 alias seqs=spm
-
-# List packages available in the three main Entropy Repositories
-# Note this requires these repos to be enabled on your system
-function sabo {
-	sudo equo query list available --quiet sabayonlinux.org | sort | uniq | wc -l
-}
-
-function sabl {
-	sudo equo query list available --quiet sabayon-limbo | sort | uniq | wc -l
-}
-
-function sabw {
-	sudo equo query list available --quiet sabayon-weekly | sort | uniq | wc -l
-}

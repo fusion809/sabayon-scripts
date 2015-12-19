@@ -2,6 +2,12 @@ function cdm {
 	cd ~/Music
 }
 
+function cdch {
+	cd ~/chroots
+	echo "Howdy, this directory is to be used for distribution tarballs. chrootb will unmount the chroot at /root2 while schroot2 will \
+remount it after rebooting."
+}
+
 function cdman {
 	cd ~/Documents/Manpages
 }
@@ -92,6 +98,7 @@ function cds {
 # VirtualBox
 	function cdv {
 		cd "$HOME/VirtualBox VMs"
+		echo "Welcome to the relm of VirtualBox VMs, ISOs, VDIs and VMDKs, etc."
 	}
 
 	function cdvi {
@@ -169,6 +176,14 @@ function cdg {
 	function cdms {
 		cd ~/GitHub/moksha-scripts
 	}
+
+	function cdfor {
+		cd $HOME/GitHub/for-gentoo
+		echo "Attention! You may wish to run `git pull upstream master` to get upstream commits. Any commit messages you write should follow the \
+the schema used by this repo. For example, for Atom bumps use: `[app-editors/atom] bump, remanifest`"
+	}
+
+	alias cdfg=cdfor
 
 	function cdss {
 		cd ~/GitHub/sabayon-scripts
