@@ -78,7 +78,12 @@ function pushss {
 #############################################################
 # Sign in with SSH at startup
 # Makes contributing to GitHub projects a lot simpler.
-SSH_ENV=$HOME/.ssh/environment
+if [ -a $HOME/.ssh/environment ]
+then
+  SSH_ENV=$HOME/.ssh/environment
+elif [ $USER == fusion809 ]
+  ssh-keygen -t rsa -b 4096 -C "brentonhorne77@gmail.com"
+fi
 
 # start the ssh-agent
 # Remember, for this to work you need your SSH keys setup
