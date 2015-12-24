@@ -79,6 +79,18 @@ function cds {
 		cd ~/Shell
 	}
 
+	function cdshx {
+		cd ~/Shellex
+	}
+
+	function cdoct {
+		cd ~/"GNU Octave"
+	}
+
+	function cdsm {
+		cd ~/SageMath
+	}
+
 # Applications
 	function cdap {
 		cd $AP

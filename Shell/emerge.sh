@@ -50,8 +50,6 @@ function ems {
   sudo emerge --sync --quiet && sudo layman -Sq
 }
 
-alias sync=ems
-
 # Updates all packages in Portage
 function emup {
   sudo emerge -uDU --with-bdeps=y @world

@@ -7,3 +7,7 @@ function ps_mem {
   sudo python ps_mem.py -p $@
   popd
 }
+
+function ps_test {
+  ps_mem $(pidof $@ | tr '\ ' ',')
+}

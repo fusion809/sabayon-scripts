@@ -1,4 +1,4 @@
-function sync {
+function ems {
 	emerge --sync && layman -S
 }
 

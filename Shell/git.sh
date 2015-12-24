@@ -63,6 +63,7 @@ function pushss {
   function cps {
     cp -a ~/Shell/* ~/GitHub/sabayon-scripts/Shell
     cp -a ~/.bashrc ~/GitHub/sabayon-scripts/
+    cp -a ~/.zshrc  ~/GitHUb/sabayon-scripts/
     sudo cp -a /root/.bashrc /home/fusion809/GitHub/sabayon-scripts/root/
     sudo cp -a /root/Shell/* /home/fusion809/GitHub/sabayon-scripts/root/Shell
   }
@@ -78,10 +79,10 @@ function pushss {
 #############################################################
 # Sign in with SSH at startup
 # Makes contributing to GitHub projects a lot simpler.
-if [ -a $HOME/.ssh/environment ]
+if [[ -a $HOME/.ssh/environment ]]
 then
   SSH_ENV=$HOME/.ssh/environment
-elif [ $USER == fusion809 ]
+elif [[ $USER == fusion809 ]]
 then
   ssh-keygen -t rsa -b 4096 -C "brentonhorne77@gmail.com"
   SSH_ENV=$HOME/.ssh/environment
@@ -102,7 +103,7 @@ function start_agent {
     /usr/bin/ssh-add
 }
 
-if [ -f "${SSH_ENV}" ]; then
+if [[ -f "${SSH_ENV}" ]]; then
      . "${SSH_ENV}" > /dev/null
      ps -ef | grep ${SSH_AGENT_PID} | grep ssh-agent$ > /dev/null || {
       start_agent;
