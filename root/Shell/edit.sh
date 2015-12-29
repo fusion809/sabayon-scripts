@@ -22,3 +22,7 @@ function nhaw {
 function nkey {
 	nano /etc/portage/package.keywords/gentoo.keywords
 }
+
+function edsh {
+	atom ~/Shell
+}

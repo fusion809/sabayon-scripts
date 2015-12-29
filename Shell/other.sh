@@ -29,3 +29,10 @@ function modbuild {
     done
   popd
 }
+
+function pk {
+	for i in "$@"
+	do
+	sudo pkill "$i"
+	done
+}
