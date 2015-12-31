@@ -6,6 +6,10 @@ function cdb {
 	cd /usr/share/backgrounds
 }
 
+function cdbin {
+	cd /usr/bin
+}
+
 function cdent {
 	cd /var/tmp/entropy
 }

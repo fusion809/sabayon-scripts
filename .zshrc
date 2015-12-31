@@ -49,7 +49,7 @@ ZSH_THEME="gentoo"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git zsh-completions)
 
 # User configuration
 
@@ -86,3 +86,12 @@ for i in ~/Shell/*.sh
 do
         . $i
 done
+source /home/fusion809/Programs/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+# Load zsh-autosuggestions.
+source ~/.zsh/zsh-autosuggestions/autosuggestions.zsh
+
+# Enable autosuggestions automatically.
+zle-line-init() {
+    zle autosuggest-start
+}
+zle -N zle-line-init
