@@ -35,7 +35,7 @@ function gentoo-chrootn {
       sudo cp /etc/resolv.conf /root$1/etc/resolv.conf
       sudo mount -o bind /tmp /root$1/tmp
       sudo mount --rbind /dev /root$1/dev
-      sudo mount --rbind /sys /root$2/sys
+      sudo mount --rbind /sys /root$1/sys
   fi
 }
 
