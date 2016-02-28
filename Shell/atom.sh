@@ -57,12 +57,19 @@ function edst {
   atom $GHUB/sabayon-tools
 }
 
-# Defining atom-beta
-function atom-beta {
-  /usr/local/bin/atom
-}
-
 # View Portage Tree
 function edpt {
   atom /usr/portage/
+}
+
+function edpy {
+  atom ~/python-scripts
+}
+
+function edgo {
+  atom $HOME/"GNU Octave"
+}
+
+function edsm {
+  atom $HOME/SageMath
 }

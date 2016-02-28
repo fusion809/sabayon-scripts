@@ -13,10 +13,13 @@ function cpath {
 	sudo cp -a /$1/$2 $HOME/GitHub/LXDE-menu/$1
 }
 
+#!/bin/bash
 function cpmen {
 	cpath etc/xdg/menus lxde-applications.menu
 	cpath usr/share/desktop-directories lxde*.directory
 	cpath usr/share/applications *.desktop
+	cpath etc/xdg/menus xfce-applications.menu
+	cpath usr/share/desktop-directories xfce*.directory
 	sudo chmod 777 -R $HOME/GitHub/LXDE-menu
 	pushd $HOME/GitHub/LXDE-menu
 	git add .

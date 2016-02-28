@@ -224,3 +224,7 @@ the schema used by this repo. For example, for Atom bumps use: `[app-editors/ato
 function cdt {
 	cd ~/Textbooks
 }
+
+function cdpy {
+	cd ~/python-scripts
+}

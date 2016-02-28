@@ -85,3 +85,7 @@ function cdu {
 function cdx {
 	cd /usr/share/xsessions
 }
+
+function cdd {
+	cd /usr/share/desktop-directories
+}
