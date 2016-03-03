@@ -158,7 +158,7 @@ function achroot {
   mount --rbind /dev /mnt/dev
   mount --rbind /sys /mnt/sys
   mount --rbind /run /mnt/run
-  cp /etc/resolv.conf /mnt/et
+  cp /etc/resolv.conf /mnt/etc/resolv.conf
   chroot /mnt /bin/bash
 }
 
