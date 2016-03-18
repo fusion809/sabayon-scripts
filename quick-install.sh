@@ -1,15 +1,18 @@
 # Create GitHub directory
-mkdir ~/GitHub
+if ! [[ -d $HOME/GitHub ]]; then
+  mkdir ~/GitHub
+fi
 
+sudo equo i git
 # Clone sabayon-scripts repo
 git clone https://github.com/fusion809/sabayon-scripts ~/GitHub/sabayon-scripts
 
 # Copy across
-cp -a ~/GitHub/sabayon-scripts/{Shell,.bashrc,.zshrc} ~/
-sudo cp -a ~/GitHub/sabayon-scripts/root/{Shell,.bashrc,.zshrc} /root/
+cp -a ~/GitHub/sabayon-scripts/{Shell,.*rc} ~/
+sudo cp -a ~/GitHub/sabayon-scripts/root/{Shell,.*rc} /root/
 
 # Get openssh, if not pre-installed and Zsh
-sudo equo i openssh zsh
+sudo equo i zsh
 
 # git clone oh-my-zsh
 git clone https://github.com/robbyrussell/oh-my-zsh ~/.oh-my-zsh
