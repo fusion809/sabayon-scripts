@@ -15,12 +15,12 @@ function theme {
   chmod +x build.sh
   ./build.sh
   cd ..
-  cp -a $1.edj ~/.e/e/themes/
+  cp -a $1.edj $HOME/.e/e/themes/
   cd ..
 }
 
 function modbuild {
-  pushd ~/Programs/moksha-modules-extra-master
+  pushd $HOME/Programs/moksha-modules-extra-master
     for i in `find . -maxdepth 1 -type d -exec basename {} \;`
     do
       pushd $i

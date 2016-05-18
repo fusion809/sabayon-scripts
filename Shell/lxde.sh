@@ -1,6 +1,6 @@
 # Edit LXDE keyboard shortcuts
 function lxkey {
-	atom ~/.config/openbox/lxde-rc.xml
+	atom $HOME/.config/openbox/lxde-rc.xml
 }
 
 function amen {

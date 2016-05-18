@@ -1,6 +1,6 @@
 # Edit OpenBox Keybindings
 function obedit {
-	atom ~/.config/openbox/lxde-rc.xml
+	atom $HOME/.config/openbox/lxde-rc.xml
 }
 
 function opconf {

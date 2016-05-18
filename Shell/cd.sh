@@ -1,15 +1,15 @@
 function cdm {
-	cd ~/Music
+	cd $HOME/Music
 }
 
 function cdch {
-	cd ~/chroots
+	cd $HOME/chroots
 	echo "Howdy, this directory is to be used for distribution tarballs. chrootb will unmount the chroot at /root2 while schroot2 will \
 remount it after rebooting."
 }
 
 function cdman {
-	cd ~/Documents/Manpages
+	cd $HOME/Documents/Manpages
 }
 alias cdmn=cdman
 
@@ -33,62 +33,62 @@ function cdmwm {
 #----- End of MediaWiki -----#
 
 function cdps {
-		cd ~/ps_mem
+		cd $HOME/ps_mem
 }
 
 # Programs
 
 function cdp {
-	cd ~/Programs
+	cd $HOME/Programs
 }
 
 function cdph {
-	cd ~/Programs/Hawaii
+	cd $HOME/Programs/Hawaii
 }
 
 alias cdhaw=cdph
 
 function cdat {
-	cd ~/Programs/atom*
+	cd $HOME/Programs/atom*
 }
 
 function cdmok {
-	cd ~/Programs/Moksha
+	cd $HOME/Programs/Moksha
 }
 
 function cdmokm {
-	cd ~/Programs/Moksha/moksha-modules-extra-master
+	cd $HOME/Programs/Moksha/moksha-modules-extra-master
 }
 
 # Pictures
 function cdpi {
-	cd ~/Pictures
+	cd $HOME/Pictures
 }
 
 function cdi {
-	cd ~/Pictures/Icons
+	cd $HOME/Pictures/Icons
 }
 
 function cds {
-	cd ~/Pictures/Screenshots
+	cd $HOME/Pictures/Screenshots
 }
 
 #- End of Pictures -#
 
 	function cdsh {
-		cd ~/Shell
+		cd $HOME/Shell
 	}
 
 	function cdshx {
-		cd ~/Shellex
+		cd $HOME/Shellex
 	}
 
 	function cdoct {
-		cd ~/"GNU Octave"
+		cd $HOME/"GNU Octave"
 	}
 
 	function cdsm {
-		cd ~/SageMath
+		cd $HOME/SageMath
 	}
 
 # Applications
@@ -149,16 +149,16 @@ function cds {
 #- End of WordPress -#
 
 function cdy {
-	cd ~/Videos/YouTube
+	cd $HOME/Videos/YouTube
 }
 
 function cdvs {
-	cd ~/Videos/Spec
+	cd $HOME/Videos/Spec
 }
 
 # GitHub
 function cdg {
-	cd ~/GitHub/
+	cd $HOME/GitHub/
 }
 
 	function cdgp {
@@ -186,7 +186,7 @@ function cdg {
 		}
 
 	function cdms {
-		cd ~/GitHub/moksha-scripts
+		cd $HOME/GitHub/moksha-scripts
 	}
 
 	function cdfor {
@@ -198,11 +198,11 @@ the schema used by this repo. For example, for Atom bumps use: `[app-editors/ato
 	alias cdfg=cdfor
 
 	function cdss {
-		cd ~/GitHub/sabayon-scripts
+		cd $HOME/GitHub/sabayon-scripts
 	}
 
 	function cdgs {
-		cd ~/GitHub/sabayon-tools
+		cd $HOME/GitHub/sabayon-tools
 	}
 
 	alias cdst=cdgs
@@ -212,19 +212,19 @@ the schema used by this repo. For example, for Atom bumps use: `[app-editors/ato
 	}
 
 	function cdfgi {
-		cd ~/GitHub/fusion809.github.io
+		cd $HOME/GitHub/fusion809.github.io
 	}
 
 	function cdgf {
-		cd ~/GitHub/hugo-website
+		cd $HOME/GitHub/hugo-website
 	}
 
 	alias cdweb=cdgf
 
 function cdt {
-	cd ~/Textbooks
+	cd $HOME/Textbooks
 }
 
 function cdpy {
-	cd ~/python-scripts
+	cd $HOME/python-scripts
 }

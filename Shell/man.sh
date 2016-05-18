@@ -34,8 +34,8 @@ function manhtmlp {
     then
       if [ -z $k ]; then unset k; fi
       k=$(basename $i | sed 's/\(.*\)\..*/\1/')
-      bzcat $i | mandoc -Thtml > ~/GitHub/fusion809.github.io/man/$k.html
-      sudo chmod 777 -R ~/GitHub/fusion809.github.io/man/$k.html
+      bzcat $i | mandoc -Thtml > $HOME/GitHub/fusion809.github.io/man/$k.html
+      sudo chmod 777 -R $HOME/GitHub/fusion809.github.io/man/$k.html
     fi
   done
 }

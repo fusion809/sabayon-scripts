@@ -1,5 +1,5 @@
 function abash {
-	pushd ~/Shell
+	pushd $HOME/Shell
 		select x in `find . -name "*.sh"`
 		do
 			 atom $x
@@ -9,9 +9,9 @@ function abash {
 }
 
 function nbash {
-	nano ~/.bashrc
+	nano $HOME/.bashrc
 }
 
 function sbash {
-	source ~/.bashrc
+	source $HOME/.bashrc
 }

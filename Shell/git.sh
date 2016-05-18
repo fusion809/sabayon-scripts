@@ -61,9 +61,9 @@ function pushss {
 # sabayon-scripts
   ## Update local sabayon-scripts repo
   function cps {
-    cp -a ~/Shell/* ~/GitHub/sabayon-scripts/Shell
-    cp -a ~/.bashrc ~/GitHub/sabayon-scripts/
-    cp -a ~/.zshrc  ~/GitHub/sabayon-scripts/
+    cp -a $HOME/Shell/* $HOME/GitHub/sabayon-scripts/Shell
+    cp -a $HOME/.bashrc $HOME/GitHub/sabayon-scripts/
+    cp -a $HOME/.zshrc  $HOME/GitHub/sabayon-scripts/
     sudo cp -a /root/.bashrc /home/fusion809/GitHub/sabayon-scripts/root/
     sudo cp -a /root/Shell/* /home/fusion809/GitHub/sabayon-scripts/root/Shell
   }

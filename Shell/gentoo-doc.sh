@@ -1,13 +1,13 @@
 function ghand {
   # Input 1 is the architecture
   # Input 2 is the Page name.
-  mkdir -p ~/Textbooks/Gentoo/$1/$2/..
-  cd ~/Textbooks/Gentoo/$1/$2/..
+  mkdir -p $HOME/Textbooks/Gentoo/$1/$2/..
+  cd $HOME/Textbooks/Gentoo/$1/$2/..
   wkhtmltopdf https://wiki.gentoo.org/wiki/Handbook:"$1"/"$2" "${2##*/}".pdf
 }
 
 function ghandall {
-  mkdir -p ~/Textbooks/Gentoo/$1 && cd ~/Textbooks/Gentoo/$1
+  mkdir -p $HOME/Textbooks/Gentoo/$1 && cd $HOME/Textbooks/Gentoo/$1
   wkhtmltopdf https://wiki.gentoo.org/wiki/Handbook:"$1" "$1".pdf
 
   # Convert to PDF the four major sections

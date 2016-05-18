@@ -71,7 +71,7 @@ function cds {
 }
 
 function cdsh {
-	cd ~/Shell
+	cd $HOME/Shell
 }
 
 function cdsmart {

@@ -24,5 +24,5 @@ function nkey {
 }
 
 function edsh {
-	atom ~/Shell
+	atom $HOME/Shell
 }

@@ -63,7 +63,7 @@ function edpt {
 }
 
 function edpy {
-  atom ~/python-scripts
+  atom $HOME/python-scripts
 }
 
 function edgo {
