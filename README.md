@@ -7,5 +7,5 @@ my life more convenient on my Sabayon machine. They are presented here mostly fo
 To quickly install this repo on your PC run:
 
 ```bash
-sh -c "$(wget -cqO- https://git.io/vaKCd)"
+/bin/bash -c "$(wget -cqO- https://git.io/vaKCd)"
 ```
