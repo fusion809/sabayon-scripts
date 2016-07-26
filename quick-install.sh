@@ -12,26 +12,26 @@ if ! [[ -f /bin/zsh ]]; then
   sudo equo i app-shells/zsh
 fi
 
-# Clone mageia-scripts repo
-if ! [[ -d $HOME/GitHub/mageia-scripts ]] || ! [[ -d $HOME/GitHub/mine/mageia-scripts ]]; then
-  git clone https://github.com/fusion809/mageia-scripts $HOME/GitHub/mine/mageia-scripts
+# Clone sabayon-scripts repo
+if ! [[ -d $HOME/GitHub/sabayon-scripts ]] || ! [[ -d $HOME/GitHub/mine/sabayon-scripts ]]; then
+  git clone https://github.com/fusion809/sabayon-scripts $HOME/GitHub/mine/sabayon-scripts
   # Copy across
-  cp -a $HOME/GitHub/mine/mageia-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/mageia-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/mageia-scripts ]]; then
-  cd $HOME/GitHub/mageia-scripts
+  cp -a $HOME/GitHub/mine/sabayon-scripts/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $HOME/GitHub/mine/sabayon-scripts/root/{Shell,.bashrc,.zshrc} /root/
+elif [[ -d $HOME/GitHub/sabayon-scripts ]]; then
+  cd $HOME/GitHub/sabayon-scripts
   git pull origin master
   cd -
   # Copy across
-  cp -a $HOME/GitHub/mageia-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mageia-scripts/root/{Shell,.bashrc,.zshrc} /root/
-elif [[ -d $HOME/GitHub/mine/mageia-scripts ]]; then
-  cd $HOME/GitHub/mine/mageia-scripts
+  cp -a $HOME/GitHub/sabayon-scripts/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $HOME/GitHub/sabayon-scripts/root/{Shell,.bashrc,.zshrc} /root/
+elif [[ -d $HOME/GitHub/mine/sabayon-scripts ]]; then
+  cd $HOME/GitHub/mine/sabayon-scripts
   git pull origin master
   cd -
   # Copy across
-  cp -a $HOME/GitHub/mine/mageia-scripts/{Shell,.bashrc,.zshrc} $HOME/
-  sudo cp -a $HOME/GitHub/mine/mageia-scripts/root/{Shell,.bashrc,.zshrc} /root/
+  cp -a $HOME/GitHub/mine/sabayon-scripts/{Shell,.bashrc,.zshrc} $HOME/
+  sudo cp -a $HOME/GitHub/mine/sabayon-scripts/root/{Shell,.bashrc,.zshrc} /root/
 fi
 
 if ! [[ -d $HOME/.oh-my-zsh ]]; then
